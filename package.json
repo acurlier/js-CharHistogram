@@ -1,0 +1,16 @@
+{
+  "name": "ts-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"tsc -w\" \"nodemon index.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19",
+    "typescript": "^4.7.4"
+  }
+}
