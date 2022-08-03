@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "debug": "tsc -w",
     "start": "concurrently --kill-others \"tsc -w\" \"nodemon dist\\index.js\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^18.6.3",
     "concurrently": "^7.3.0",
     "nodemon": "^2.0.19",
     "typescript": "^4.7.4"
