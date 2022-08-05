@@ -64,7 +64,10 @@ async function histoFromStdin() {
     process.stdin.setEncoding("utf-8");
     let histo = new Histogram();
     for await (let chunk of process.stdin) {
-        histo.add(chunk);
+        if (chunk.toString() === "\r\n") {
+            break
+        }
+        histo.add((chunk).toString());
     }
     return histo;
 }
